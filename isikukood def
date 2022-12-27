@@ -1,63 +1,64 @@
-def Kontroll(isikukood:str):
-    """Isikukoodi kontroll number
-    On vaja isikukood sisestada
-    :param str ik: Inimese isikukood
-    :rtype: var Maramata tuup
-    """
-    ik_list=list(isikukood)
+def control(code:str):
+    '''personal code control num
+    require to enter idetefication code
+    :param str q: personal code
+    :rtype: var unspecified type
+    '''
+    q_list=list(code)
     s=0
     for i in range(0,10):
-        s+=(i%9+1)*int(ik_list[i])
-        #print(f"{i%9+1}*{int(ik_list[i])}+", end="")
-    print('check total of personal code',s)
+        s+=(i%9+1)*int(q_list[i])
+        #print(f'{i%9+1}*(int{q_list[i]})+', end=" ")
+    print('check total of person indetefication code',s)
     s=s-(s//11)*11
     print('the last num',s)
-    if s==int(ik_list[10]):
-        vastus=s
+    if s==int(q_list[10]):
+         answer=s
     else:
-        vastus="Kontroll number on vale"
-    return vastus
-def Haigla(ik3:int):
-    """Haigla 3 isikukoodi numbri alusel
-    :param int ik3: Isikukoodi 3 numbrid
-    :rtype: str Haigla ja koht
-    """
-    if ik3>1 and ik3<=10:
-        haigla="place of birth: Kuresare"
-    elif ik3>10 and ik3<=19:
-        haigla="place of birth: Tartu"
-    elif ik3>19 and ik3<=220:
-        haigla="place of birth: Ida-Tallinna Keskhaigla, Pelgulinna sunnitusmaja, Hiiumaa, Keila, Rapla haigla, Loksa haigla"
-    elif ik3>220 and ik3<=270:
-        haigla="place of birth: Ida-Viru Keskhaigla (Kohtla-Jarve, endine Johvi)"
-    elif ik3>270 and ik3<=370:
-        haigla="place of birth: Maarjamoisa Kliinikum (Tartu), Jogeva Haigla"
-    elif ik3>370 and ik3<=420:
-        haigla="place of birth: Narva hospital"
-    elif ik3>420 and ik3<=470:
-        haigla="place of birth: Parnu hospital"
-    elif ik3>470 and ik3<=490:
-        haigla="place of birth: Pelgulinna Sunnitusmaja (Tallinn), Haapsalu haigla"
-    elif ik3>490 and ik3<=520:
-        haigla="place of birth: Jarvamaa Haigla (Paide)"
-    elif ik3>520 and ik3<=570:
-        haigla="place of birth: Rakvere, Tapa haigla"
-    elif ik3>570 and ik3<=600:
-        haigla="place of birth: Valga hospital"
-    elif ik3>600 and ik3<=650:
-        haigla="place of birth: Viljandi hospital"
-    elif ik3>650 and ik3<=700:
-        haigla="place of birth: Louna-Eesti Haigla (Voru), Polva Haigla"
-    
-    return haigla
-def Sugu(ik1:int)->str:
-    """ isikukoodi kontroll alusel
-    kontrollitakse isiku sugu
-    :param int ik1: isikukoodi 3 numbrid
-    :rtype: str 1,3,5 mees. 2,4,6 naine.
-    """
-    if ik1%2==0:
-        sugu="gender of a person: woman"
+         answer='control num illigal'
+    return answer
+def Hospital(n3:int):
+    '''Based on hospital 3 digits
+    :param int n3: personal code 3 digits
+    :rtype:str hospital and place
+    '''
+    if n3>1 and n3<=10:
+        hospital="place of birth: Kuresare"
+    elif n3>10 and n3<=19:
+        hospital="place of birth: Tartu"
+    elif n3>19 and n3<=220:
+        hospital="place of birth: Ida-Tallinna Keskhaigla, Pelgulinna sunnitusmaja, Hiiumaa, Keila, Rapla haigla, Loksa haigla"
+    elif n3>220 and n3<=270:
+        hospital="place of birth: Ida-Viru Keskhaigla (Kohtla-Jarve, endine Johvi)"
+    elif n3>270 and n3<=370:
+        hospital="place of birth: Maarjamoisa Kliinikum (Tartu), Jogeva Haigla"
+    elif n3>370 and n3<=420:
+        hospital="place of birth: Narva hospital"
+    elif n3>420 and n3<=470:
+        hospital="place of birth: Parnu hospital"
+    elif n3>470 and n3<=490:
+        hospital="place of birth: Pelgulinna Sunnitusmaja (Tallinn), Haapsalu haigla"
+    elif n3>490 and n3<=520:
+        hospital="place of birth: Jarvamaa Haigla (Paide)"
+    elif n3>520 and n3<=570:
+        hospital="place of birth: Rakvere, Tapa haigla"
+    elif n3>570 and n3<=600:
+        hospital="place of birth: Valga hospital"
+    elif n3>600 and n3<=650:
+        hospital="place of birth: Viljandi hospital"
+    elif n3>650 and n3<=700:
+        hospital="place of birth: Louna-Eesti Haigla (Voru), Polva Haigla"
+
+    return hospital
+def persons_gender(q:int):
+    ''' based on personal code 
+    has been controlled person's sex
+    :param int q: idetefication code 1 digit
+    :rtype: str 1,3,5 man. 2,4,6 woman.
+    '''
+    if q%2==0:
+        persons_gender='gender of a person: woman'
     else:
-        sugu="gender of a person: man"
-    return sugu
+        persons_gender='gender of a person: man'
+
+    return persons_gender
