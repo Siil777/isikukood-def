@@ -52,7 +52,7 @@ def Haigla(ik3:int):
     return haigla
 def Sugu(ik1:int)->str:
     """ isikukoodi kontroll alusel
-    kontrolitakse isiku sugu
+    kontrollitakse isiku sugu
     :param int ik1: isikukoodi 3 numbrid
     :rtype: str 1,3,5 mees. 2,4,6 naine.
     """
