@@ -48,7 +48,7 @@ def Haigla(ik3:int):
         haigla="place of birth: Viljandi hospital"
     elif ik3>650 and ik3<=700:
         haigla="place of birth: Louna-Eesti Haigla (Voru), Polva Haigla"
-    # jne
+    
     return haigla
 def Sugu(ik1:int)->str:
     """ isikukoodi kontroll alusel
