@@ -52,7 +52,7 @@ def Hospital(n3:int):
     return hospital
 def persons_gender(q:int):
     ''' based on personal code 
-    has been controlled person's sex
+    is controlled person's sex
     :param int q: idetefication code 1 digit
     :rtype: str 1,3,5 man. 2,4,6 woman.
     '''
