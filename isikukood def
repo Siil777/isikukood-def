@@ -1,6 +1,6 @@
 def control(code:str):
     '''personal code control num
-    require to enter idetefication code
+    require to enter identification code
     :param str q: personal code
     :rtype: var unspecified type
     '''
@@ -9,7 +9,7 @@ def control(code:str):
     for i in range(0,10):
         s+=(i%9+1)*int(q_list[i])
         #print(f'{i%9+1}*(int{q_list[i]})+', end=" ")
-    print('check total of person indetefication code',s)
+    print('check total of person identification code',s)
     s=s-(s//11)*11
     print('the last num',s)
     if s==int(q_list[10]):
@@ -53,7 +53,7 @@ def Hospital(n3:int):
 def persons_gender(q:int):
     ''' based on personal code 
     is controlled person's sex
-    :param int q: idetefication code 1 digit
+    :param int q: identification code 1 digit
     :rtype: str 1,3,5 man. 2,4,6 woman.
     '''
     if q%2==0:
