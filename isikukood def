@@ -15,7 +15,7 @@ def control(code:str):
     if s==int(q_list[10]):
          answer=s
     else:
-         answer='control num illigal'
+         answer='control num illegal'
     return answer
 def Hospital(n3:int):
     '''Based on hospital 3 digits
